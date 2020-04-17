@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
 RUN rm -r /usr/share/nginx/html/*.*
 
