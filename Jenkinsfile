@@ -1,4 +1,4 @@
-colorgame pipeline {
+pipeline {
     agent any
     stages {
         stage('Lint HTML & Dockerfile'){
