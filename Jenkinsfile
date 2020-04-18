@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Docker Image'){
                     steps {
-                        sh 'docker build -t simple-cg-image:latest .'
+                        sh 'docker build -t simple-cg-image:v1 .'
                         sh 'docker images'
                     }
                 }
