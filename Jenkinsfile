@@ -7,7 +7,7 @@ pipeline {
                 sh 'hadolint Dockerfile'
             }
         }
-        stage('Build Docker Image'){
+        stage('Build and Run Docker Image'){
                     steps {
                         sh 'docker build -t simple-cg-image:v1 . '
                         sh 'docker images'
