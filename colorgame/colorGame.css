@@ -21,11 +21,10 @@ body {
 	max-width: 600px;
 }
 
-#heading {
+h1 {
 	text-align: center;
 	line-height: 1.1;
 	font-weight: normal;
-	font-size: 20px;
 	color: white;
 	background: steelblue;
 	margin: 0;
@@ -33,6 +32,9 @@ body {
 	padding: 20px 0;
 }
 
+h3{
+	color: white;
+}
 #colorDisplay {
 	font-size: 200%;
 }
