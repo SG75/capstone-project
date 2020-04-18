@@ -11,6 +11,7 @@ pipeline {
                     steps {
                         sh 'docker build -t simple-cg-image:v1 .'
                         sh 'docker images'
+                        sh 'docker run -d --name cg-container -p 8080:80 simple-cg-image:v1'
                     }
                 }
     }
