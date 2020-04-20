@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: stop container if running
+    command: docker stop cg-container
+    ignore_errors: yes
+
+  - name: remove stopped container
+    command: docker rm cg-container
+    ignore_errors: yes
+
+  - name: remove images from docker
+    command: docker rmi simple-cg-image:v1; docker rmi sg75/simple-cg-image:v1; docker rmi sg75/simple-cg-image; docker rmi nginx
+    ignore_errors: yes
+
+  - name: pull docker image from dockerhub
+    command: docker pull sg75/simple-cg-image:v1
+
+  - name: create container using the pulled image
+    command: docker run -d --name cg-container -p 8080:80 sg75/simple-cg-image:v1
+
+
+ 
+
+

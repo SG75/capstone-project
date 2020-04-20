@@ -16,9 +16,7 @@ cleanup:
 
 
 rmi:
-	${DOCKER} rmi -f $(shell docker images -a -q)
+	${DOCKER} rmi -f $(shell ${DOCKER} images -a -q)
 	
-rmi_docker_hub:
-	curl --raw -L -X DELETE -u "${USER_NAME}" -H "Accept: application/json" -H "Content-Type: application/json"  --post3 https://hub.docker.com/v1/repositories/${DOCKER_HUB_REPO}/${AAP_NAME}/$(RELEASE_TAG)
 
 
