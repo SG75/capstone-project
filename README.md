@@ -1,7 +1,7 @@
 
 ## Capstone Project: Implement a rolling deployment CI/CD pipeline.
 
-![simple devops cicd pipeline](https://github.com/SG75/capstone-project/blob/master/images/cicd.jpg)
+![simple devops cicd pipeline](https://github.com/SG75/capstone-project/blob/master/screenshots/cicd.jpg)
 
 This project builds a simple DevOps Rolling deployment CI/ CD pipeline.
 
