@@ -1,0 +1,8 @@
+[ansible-VM]
+localhost
+
+[docker-VM]
+192.168.0.189
+
+[k8s-VM]
+192.168.0.174

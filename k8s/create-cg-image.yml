@@ -1,0 +1,20 @@
+---
+- hosts: ansible-VM
+  become: true
+
+  tasks:
+  - name: create docker image using cg application
+    command: docker build -t simple-cg-image:v1 .
+    args:
+      chdir: /opt/k8s   ## directory where Dockerfile is present
+
+  - name: create a tag to image
+    command: docker tag simple-cg-image:v1 sg75/simple-cg-image:v1
+  
+  - name: push image to docker hub
+    command: docker push sg75/simple-cg-image:v1
+
+  - name: remove docker images from ansible server
+    command : docker rmi simple-cg-image:v1 sg75/simple-cg-image:v1
+    ignore_errors: yes
+
